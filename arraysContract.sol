@@ -16,6 +16,10 @@ contract ArraysContract {
         // Allocate memory for 8 elements to the dynamic bool storage array
         dynamicBoolArray = new bool[](8);
         
-        dynamicIntArray
+        // allocate memory and initialise elements in the int array
+        // explicit conversion is needed from uint8 to int8
+        dynamicInt8Array = [int8(1), 2, 3];
+        
+        
     }
 }
