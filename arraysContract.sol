@@ -36,5 +36,16 @@ contract ArraysContract {
         // memoryArray.length = 6;
         
         /** Examples of array inititalization with assignment below */
+        
+        // Static storage array assignment is OK
+        // Compile time size check is carried out
+        // so assignemnt to [1,2,3,4] will fail below
+        
+        staticInt256Array = [1,2,3];
+        staticInt256Array = [1,2,3];
+        staticInt256Array = [1,2,3];
+        
+        // Static memory array
+        uint[2] memory staticMemoryArray;
     }
 }
