@@ -47,5 +47,19 @@ contract ArraysContract {
         
         // Static memory array
         uint[2] memory staticMemoryArray;
+        
+        // This is allowed - make sure the type is matching
+        // staticMemoryArray is of type uint
+        staticMemoryArray = [uint(1),2];
+        
+        // This is allowed
+        staticMemoryArray[0] = 0;
+        staticMemoryArray[1] = 1;
+        
+        dynamicInt8Array[0] = 0;
+        dynamicMemoryArray[0] = 1;
+        
+        
     }
+    
 }
