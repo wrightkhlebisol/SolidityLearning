@@ -22,7 +22,14 @@ contract StringBytes{
     }
     
     
-    
+    // Retrieves the element at specified index
+    // Cannot do with strings, hence converting to bytes
+    function getElementAt(uint index) view public returns(byte _letter){
+        // convert string to bytes
+        bytes memory bytesData = bytes (string1);
+        // Get the ASCII for the element at the index
+        _letter = bytesData[index];
+    }
     
     
     // Converts the string to bytes and sends
@@ -32,11 +39,4 @@ contract StringBytes{
         _length = temp.length;
     }
     
-    // Retrieves element at an index
-    function getElementAt(uint index) view public returns(byte _letter){
-        // convert string to bytes
-        bytes memory temp = bytes (stringStorage);
-        // Get the ASCII for the element at the index
-        _letter = temp[index];
-    }
 }
