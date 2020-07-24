@@ -31,6 +31,28 @@ contract StringBytes{
         _letter = bytesData[index];
     }
     
+    function testing() public {
+        // uint8 need to be explicitly converted to byte type
+        // Converting to byte type, since fixedByteArray
+        // is a byte type array
+        // Assignment NOT allowed as bytes3Array is a static array
+        // is readonly
+        // fixedByteArray = [bytes3(1),2,3];
+        // bytes3Array[0] = 1;
+        
+        // Memory dynamic bytes Array
+        bytes memory memoryBytes; // dynamic memory array
+        memoryBytes = new bytes(20); // allocating memeory
+        memoryBytes[0] = "a";
+        
+        // Push will give compiler error as push() allowed for storage only
+        // memoryBytes.push('c');
+    }
+    
+    function stringExamples() public pure returns(string string3){
+        string3 = "abcde"; //string array in memory
+    }
+    
     
     // Converts the string to bytes and sends
     // the length of the string
