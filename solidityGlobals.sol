@@ -15,7 +15,7 @@ contract GlobalsContract{
     // Demonstrates the use of the now global
     function timeUnits() public view returns (uint){
         uint timeNow = now; // storing current time using now
-        // returns block time in seconds since 1960
+        // returns block time in seconds since 1970
         if(timeNow == 1000 days){ // converting 1000 literal to days, using the suffix days
             return timeNow;
         }
